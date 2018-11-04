@@ -1,5 +1,7 @@
 FROM centos:centos6
 
+MAINTAINER 2018-10-01 xiaozhi90 sunlin901203@qq.com
+
 RUN yum install -y pcre-devel wget net-tools gcc zlib zlib-devel make openssl-devel
 RUN useradd -M -s /sbin/nologin nginx
 ADD http://nginx.org/download/nginx-1.6.2.tar.gz .
