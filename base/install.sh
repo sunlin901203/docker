@@ -1,5 +1,5 @@
 # 设置输入参数
-application="spring-boot-sample"
+application="base"
 version=$1
 if [ -z "$version" ];then
     version="latest"

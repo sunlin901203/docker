@@ -24,9 +24,10 @@ ENV PATH=${PATH}:/opt/java/bin
 RUN echo $JAVA_HOME && \
     echo $PATH
 
-# 安装项目
-ADD target/spring-boot-sample-1.0.0-SNAPSHOT.jar .
+# 安装nginx
 
-expose 8080
+# 安装redis
+
+
 
 CMD ["bash"]
