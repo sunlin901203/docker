@@ -12,6 +12,15 @@ RUN cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 # 安装软件
 RUN yum install wget -y
 
+# 创建目录
+RUN mkdir /opt/nginx && \
+    mkdir /opt/mysql && \
+    mkdir /opt/redis && \
+    mkdir /opt/git && \
+    mkdir /opt/maven && \
+    mkdir /opt/deploy && \
+    mkdir /opt/logs
+
 # 安装Java
 # RUN wget http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
 WORKDIR /opt
@@ -30,6 +39,9 @@ RUN echo "JAVA_HOME=$JAVA_HOME" && \
 
 
 # 安装nginx
+
+#
+
 
 # 安装redis
 
