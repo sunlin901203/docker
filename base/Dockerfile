@@ -10,8 +10,8 @@ RUN cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 RUN yum install wget -y
 
 # 安装Java
-RUN cd /opt
 # RUN wget http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
+WORKDIR /opt
 RUN curl -L -O -H "Cookie: oraclelicense=accept-securebackup-cookie" \
     -k "http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz"
 RUN tar zxvf jdk-8u191-linux-x64.tar.gz && \
@@ -21,8 +21,10 @@ RUN tar zxvf jdk-8u191-linux-x64.tar.gz && \
 ENV JAVA_HOME=/opt/java
 ENV PATH=${PATH}:/opt/java/bin
 
-RUN echo $JAVA_HOME && \
-    echo $PATH
+RUN echo "JAVA_HOME=$JAVA_HOME" && \
+    echo "PATH=$PATH" && \
+    ll /opt
+
 
 # 安装nginx
 
