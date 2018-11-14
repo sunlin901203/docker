@@ -26,7 +26,7 @@ ENV PATH=${PATH}:/opt/java/bin
 
 RUN echo "JAVA_HOME=$JAVA_HOME" && \
     echo "PATH=$PATH" && \
-    ll /opt
+    ls -l /opt
 
 
 # 安装nginx
