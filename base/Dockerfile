@@ -16,6 +16,7 @@ RUN yum install wget -y
 RUN mkdir /opt/nginx && \
     mkdir /opt/mysql && \
     mkdir /opt/redis && \
+    mkdir /opt/elasticsearch && \
     mkdir /opt/git && \
     mkdir /opt/maven && \
     mkdir /opt/deploy && \
