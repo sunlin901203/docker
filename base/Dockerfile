@@ -34,7 +34,6 @@ RUN mkdir /opt/nginx && \
 # 安装nginx
 
 # 安装redis
-RUN wget http://download.redis.io/releases/redis-3.2.6.tar.gz
 RUN wget http://download.redis.io/releases/redis-5.0.0.tar.gz
 RUN tar -zxvf redis-5.0.0.tar.gz && \
     rm -f redis-5.0.0.tar.gz && \
