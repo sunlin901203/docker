@@ -24,7 +24,6 @@ RUN yum install wget -y && \
 WORKDIR /opt
 RUN mkdir /opt/nginx && \
     mkdir /opt/mysql && \
-    mkdir /opt/redis && \
     mkdir /opt/elasticsearch && \
     mkdir /opt/git && \
     mkdir /opt/maven && \
@@ -34,8 +33,9 @@ RUN mkdir /opt/nginx && \
 # 安装nginx
 
 # 安装redis
+WORKDIR /opt
 RUN wget http://download.redis.io/releases/redis-5.0.0.tar.gz
-RUN tar -zxvf redis-5.0.0.tar.gz && \
+RUN tar zxvf redis-5.0.0.tar.gz && \
     rm -f redis-5.0.0.tar.gz && \
     ln -s redis-5.0.0 redis
 WORKDIR redis-5.0.0
@@ -45,7 +45,7 @@ RUN make
 
 # 安装Java
 WORKDIR /opt
-# RUN wget http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
+RUN wget http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
 RUN curl -L -O -H "Cookie: oraclelicense=accept-securebackup-cookie" \
     -k "http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz"
 RUN tar zxvf jdk-8u191-linux-x64.tar.gz && \
