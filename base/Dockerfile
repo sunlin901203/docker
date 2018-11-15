@@ -21,6 +21,7 @@ RUN yum install wget -y && \
     yum  install  gcc -y
 
 # 创建目录
+WORKDIR /opt
 RUN mkdir /opt/nginx && \
     mkdir /opt/mysql && \
     mkdir /opt/redis && \
@@ -44,7 +45,6 @@ RUN make
 
 # 安装Java
 # RUN wget http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
-WORKDIR /opt
 RUN curl -L -O -H "Cookie: oraclelicense=accept-securebackup-cookie" \
     -k "http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz"
 RUN tar zxvf jdk-8u191-linux-x64.tar.gz && \
