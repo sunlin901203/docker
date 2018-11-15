@@ -9,6 +9,13 @@ RUN alias ll="ls -l"
 RUN cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo 'Asia/Shanghai' >/etc/timezone
 
+# 添加测试用户work，密码work，并且将此用户添加到sudoers里
+RUN groupadd -g 500 work && useradd -u 500 -m -g work work -s /bin/bash && \
+    echo "work:work" | chpasswd && \
+    echo "work ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
+    chown work:work /home/work && \
+    echo "root:root" | chpasswd
+
 # 安装软件
 RUN yum install wget -y
 
