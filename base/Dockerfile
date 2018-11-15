@@ -17,7 +17,8 @@ RUN groupadd -g 500 work && useradd -u 500 -m -g work work -s /bin/bash && \
     echo "root:root" | chpasswd
 
 # 安装软件
-RUN yum install wget -y
+RUN yum install wget -y && \
+    yum  install  gcc -y
 
 # 创建目录
 RUN mkdir /opt/nginx && \
@@ -28,6 +29,18 @@ RUN mkdir /opt/nginx && \
     mkdir /opt/maven && \
     mkdir /opt/deploy && \
     mkdir /opt/logs
+
+# 安装nginx
+
+# 安装redis
+RUN wget http://download.redis.io/releases/redis-3.2.6.tar.gz
+RUN tar -zxvf redis-3.2.6.tar.gz && \
+    rm -f redis-3.2.6.tar.gz && \
+    ln -s redis-3.2.6 redis
+WORKDIR redis-3.2.6
+RUN make
+
+# 安装elasticsearch
 
 # 安装Java
 # RUN wget http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
@@ -44,15 +57,5 @@ ENV PATH=${PATH}:/opt/java/bin
 RUN echo "JAVA_HOME=$JAVA_HOME" && \
     echo "PATH=$PATH" && \
     ls -l /opt
-
-
-# 安装nginx
-
-#
-
-
-# 安装redis
-
-
 
 CMD ["bash"]
