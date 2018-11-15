@@ -8,6 +8,4 @@ RUN echo "JAVA_HOME=$JAVA_HOME" && \
     java -version && \
     ls -l /opt
 
-expose 8080
-
 CMD ["bash"]

@@ -18,7 +18,7 @@ echo "sudo docker pull xiaozhi90/${application}:${version}"
 sudo docker pull xiaozhi90/${application}:${version}
 
 # 启动
-sudo docker ps -a -q --filter "name=${application}" |grep -q . && docker stop ${application} && docker rm -fv ${application}
-sudo docker run -itd --name ${application} --net=host xiaozhi90/${application}:${version} java -jar -Xmx1G -Xmx1G -Dspring.profiles.active=${profile} -Dserver.port=${port} -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=~/logs/oom -server -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -Xloggc:~/opt/${application}-gc.log ${application_jar_name}
+sudo docker ps -a -q --filter "name=${application}-${port}" |grep -q . && docker stop ${application}-${port} && docker rm -fv ${application}-${port}
+sudo docker run -itd --name ${application}-${port} -p ${port}:${port} xiaozhi90/${application}:${version} java -jar -Xmx1G -Xmx1G -Dspring.profiles.active=${profile} -Dserver.port=${port} -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=~/logs/oom -server -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -Xloggc:~/opt/${application}-gc.log ${application_jar_name}
 
 echo "end startup"
