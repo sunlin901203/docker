@@ -11,7 +11,7 @@ ln -s elasticsearch-6.5.0 elasticsearch
 chmod 755 /opt/elasticsearch/bin/elasticsearch
 ./elasticsearch/bin/elasticsearch -d
 
-# 验证是否启动成功
+# 验证是否成功
 curl --head http://localhost:9200/?pretty
 curl http://localhost:9200/?pretty
 
