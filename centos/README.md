@@ -1,7 +1,6 @@
 ## 软件安装
 
 #### 进行中
-- gradle.sh
 - jenkins.sh
 - mysql.sh
 - nginx.sh
