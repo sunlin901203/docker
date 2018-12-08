@@ -12,13 +12,13 @@ wget https://github.com/OpenEmu/OpenEmu/releases/download/v2.0.8/OpenEmu_2.0.8.z
 curl -L -k -C - -o VMware-Fusion.dmg "https://www.vmware.com/go/getfusion"
 
 # 必备软件
-https://download.jetbrains.8686c.com/idea/ideaIU-2018.3.1.dmg
+wget https://download.jetbrains.8686c.com/idea/ideaIU-2018.3.1.dmg
 
 curl -L -O -H "Cookie: oraclelicense=accept-securebackup-cookie" -k "http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz"
 
 wget https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.13-macos10.14-x86_64.dmg
 
-https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-8.0.13-macos-x86_64.dmg
+wget https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-8.0.13-macos-x86_64.dmg
 
 wget http://mirrors.hust.edu.cn/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz
 
@@ -35,7 +35,7 @@ wget https://www.charlesproxy.com/assets/release/4.2.7/charles-proxy-4.2.7.dmg
 wget http://mirror.bit.edu.cn/apache//jmeter/binaries/apache-jmeter-5.0.tgz
 
 # 其他软件
-https://download.jetbrains.8686c.com/python/pycharm-professional-2018.3.1.dmg
+wget https://download.jetbrains.8686c.com/python/pycharm-professional-2018.3.1.dmg
 
 wget https://pkg.jenkins.io/redhat-stable/jenkins-2.150.1-1.1.noarch.rpm
 
