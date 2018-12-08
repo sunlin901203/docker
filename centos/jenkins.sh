@@ -1,12 +1,27 @@
-# 下载安装包
+# 下载
 cd /opt
-curl -L -O -H "https://pkg.jenkins.io/redhat/jenkins-2.154-1.1.noarch.rpm"
-tar zxvf jdk-8u191-linux-x64.tar.gz
-ln -s jdk1.8.0_191 java
-mv jenkins-2.154-1.1.noarch.rpm /opt/tmp
+wget https://pkg.jenkins.io/redhat-stable/jenkins-2.150.1-1.1.noarch.rpm
 
-# 验证是否成功
-java -version
+# 安装
+rpm -ih jenkins-2.60-1.1.noarch.rpm
+mv jenkins-2.150.1-1.1.noarch.rpm /opt/tmp
+
+# 启动
+service jenkins start
+
+# 验证
+curl --head http://localhost:8080
+curl http://localhost:8080
+
+# 备注
+# 安装完后会出现以下四种目录
+# war包：/usr/lib/jenkins/jenkins.war
+# 配置文件：/etc/sysconfig/jenkins
+# JENKINS_HOME目录：/var/lib/jenkins
+# jenkins日志文件：/var/log/jenkins/jenkins.log
+# 参考：https://blog.csdn.net/qq_28666081/article/details/82288332
+
+
 
 
 
