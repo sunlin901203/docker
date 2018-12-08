@@ -1,11 +1,10 @@
 # 下载安装包
-mkdir /opt/tmp
-cd /opt/tmp
+cd /opt
 curl -L -k -C - -O "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.5.0.tar.gz"
 tar zxvf elasticsearch-6.5.0.tar.gz
-mv elasticsearch-6.5.0 /opt/
-cd /opt
 ln -s elasticsearch-6.5.0 elasticsearch
+mkdir /opt/tmp
+mv elasticsearch-6.5.0.tar.gz /opt/tmp
 
 # 启动
 chmod 755 /opt/elasticsearch/bin/elasticsearch
