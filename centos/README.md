@@ -10,8 +10,8 @@
 - java.sh
 - maven.sh
 - git.sh
-- elasticsearch.sh
 - lrzsz.sh
+- elasticsearch.sh
 - zipkin.sh
 - jenkins.sh
 
