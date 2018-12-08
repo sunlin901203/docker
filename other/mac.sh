@@ -45,7 +45,7 @@ curl -sSL https://zipkin.io/quickstart.sh | bash -s
 
 # 备注
 # curl -o xxx.dmg，curl命令中 -o 后可以修改下载文件的名称
-# wget -O Postman-osx.zip，指定文件名
+# wget -O /opt/tmp/Postman-osx.zip，指定文件名
 
 
 
