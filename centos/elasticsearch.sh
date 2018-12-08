@@ -1,19 +1,19 @@
-# 下载安装包
+# 下载
 cd /opt
 curl -L -k -C - -O "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.5.0.tar.gz"
+
+# 安装
 tar zxvf elasticsearch-6.5.0.tar.gz
 ln -s elasticsearch-6.5.0 elasticsearch
-mkdir /opt/tmp
 mv elasticsearch-6.5.0.tar.gz /opt/tmp
 
 # 启动
 chmod 755 /opt/elasticsearch/bin/elasticsearch
 ./elasticsearch/bin/elasticsearch -d
 
-# 验证是否成功
+# 验证
 curl --head http://localhost:9200/?pretty
 curl http://localhost:9200/?pretty
-
 
 # 备注
 # curl -k, --insecure      Allow connections to SSL sites without certs (H)
