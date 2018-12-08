@@ -1,10 +1,10 @@
 ## 软件安装
 
 #### 进行中
-- jenkins.sh
 - mysql.sh
-- nginx.sh
 - redis.sh
+- nginx.sh
+
 
 #### 完成
 - java.sh
@@ -13,4 +13,5 @@
 - elasticsearch.sh
 - lrzsz.sh
 - zipkin.sh
+- jenkins.sh
 
