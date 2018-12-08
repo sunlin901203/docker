@@ -19,7 +19,7 @@ RUN cd nginx-1.8.0 && ./configure --prefix=/usr/local/nginx && make && make inst
 RUN rm -vf /usr/local/nginx/conf/nginx.conf
 COPY .nginx_conf /usr/local/nginx/conf/nginx.conf
 
-expose 80
+EXPOSE 80
 
 ENTRYPOINT nginx -g "daemon off;"
 
