@@ -45,7 +45,7 @@ RUN make
 
 # 安装Java
 WORKDIR /opt
-RUN wget http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
+# RUN wget http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
 RUN curl -L -O -H "Cookie: oraclelicense=accept-securebackup-cookie" \
     -k "http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz"
 RUN tar zxvf jdk-8u191-linux-x64.tar.gz && \
