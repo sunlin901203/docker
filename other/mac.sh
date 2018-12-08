@@ -27,7 +27,7 @@ wget https://download.sublimetext.com/Sublime%20Text%20Build%203176.dmg
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.5.0.tar.gz
 
 # postman
-# wget -c https://dl.pstmn.io/download/latest/osx
+# wget -c -O Postman-osx.zip https://dl.pstmn.io/download/latest/osx
 curl -L -k -C - -o Postman-osx.zip https://dl.pstmn.io/download/latest/osx
 
 wget https://www.charlesproxy.com/assets/release/4.2.7/charles-proxy-4.2.7.dmg
@@ -45,6 +45,7 @@ curl -sSL https://zipkin.io/quickstart.sh | bash -s
 
 # 备注
 # curl -o xxx.dmg，curl命令中 -o 后可以修改下载文件的名称
+# wget -O Postman-osx.zip，指定文件名
 
 
 
