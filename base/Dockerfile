@@ -3,7 +3,7 @@ FROM centos:centos6
 MAINTAINER 2018-10-01 xiaozhi90 sunlin901203@qq.com
 
 # 重命名ls -l
-RUN alias ll="ls -l"
+RUN alias ll="ls -al"
 
 # 设置时区
 RUN cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
