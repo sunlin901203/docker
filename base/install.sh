@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # 设置输入参数
 application="base"
 version=$1

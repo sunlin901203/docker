@@ -1,10 +1,10 @@
 # 设置输入参数
 application="spring-boot-sample"
 version=$1
-if [ -z "$version" ];then
+if [[ -z "${version}" ]];then
     version="latest"
 fi
-maven_home="/opt/maven"
+maven_home="/opt/maven/"
 
 # 打印参数
 echo "application image current version is ${version}"
