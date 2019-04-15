@@ -3,7 +3,7 @@
 # 设置输入参数
 application="base"
 version=$1
-if [ -z "$version" ];then
+if [[ -z "$version" ]];then
     version="latest"
 fi
 

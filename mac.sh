@@ -1,6 +1,8 @@
-# Mac
+#!/usr/bin/env bash
 
-cd /opt/tmp
+# mac
+
+cd /opt/tmp/
 
 # 日常软件
 wget https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
