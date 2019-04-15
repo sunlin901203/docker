@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# common
+alias ll="ls -al"
+
 # java
 cd /opt/
 curl -L -O -H "Cookie: oraclelicense=accept-securebackup-cookie" -k "http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz"
@@ -30,6 +33,12 @@ export PATH=$PATH:${MAVEN_HOME}/bin
 EOF
 source /etc/profile
 mvn -v
+
+# arthas
+mkdir /opt/arthas/
+cd /opt/arthas/
+wget https://alibaba.github.io/arthas/arthas-boot.jar
+# java -jar arthas-boot.jar
 
 # mysql
 
@@ -78,4 +87,7 @@ nohup java -jar zipkin.jar --zipkin.storage.type=elasticsearch --zipkin.storage.
 curl http://127.0.0.1:9411/health
 
 # lrzsz
-yum -y install lrzsz
+yum install wget -y
+yum install gcc -y
+yum install lrzsz -y
+yum install net-tools -y
