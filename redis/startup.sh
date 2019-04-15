@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 echo "begin startup"
 
 # 设置输入参数
@@ -5,7 +7,7 @@ application="redis"
 profile="test"
 port=6379
 version=$1
-if [ -z "$version" ];then
+if [[ -z "$version" ]];then
     version="latest"
 fi
 
