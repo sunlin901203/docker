@@ -12,7 +12,7 @@ maven_home="/opt/maven/"
 echo "application image current version is ${version}"
 
 # 打包
-$maven_home/bin/mvn clean install -Dmaven.test.skip
+${maven_home}/bin/mvn clean install -Dmaven.test.skip
 
 # 构建并推送镜像
 sudo docker build -t xiaozhi90/${application}:latest -f docker/Dockerfile .
