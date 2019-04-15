@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 echo "begin startup"
 
 # 设置输入参数
