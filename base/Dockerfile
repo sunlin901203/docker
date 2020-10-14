@@ -49,9 +49,9 @@ WORKDIR /opt/mysql/
 
 # 安装redis
 WORKDIR /opt/
-RUN wget http://download.redis.io/releases/redis-5.0.0.tar.gz
-RUN tar zxvf redis-5.0.0.tar.gz && rm -f redis-5.0.0.tar.gz && ln -s redis-5.0.0 redis
-WORKDIR redis-5.0.0
+RUN wget https://download.redis.io/releases/redis-5.0.9.tar.gz
+RUN tar zxvf redis-5.0.9.tar.gz && rm -f redis-5.0.9.tar.gz && ln -s redis-5.0.9 redis
+WORKDIR redis-5.0.9
 RUN make
 
 # elasticsearch
